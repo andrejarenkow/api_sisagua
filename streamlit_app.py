@@ -74,6 +74,15 @@ if st.button("Buscar dados"):
             mes=int(mes) if mes else None,
             parametro=parametro if parametro else None
         )
+        df = df[['regional_de_saude', 'municipio',
+       'codigo_ibge', 'numero_da_amostra', 'motivo_da_coleta',
+       'tipo_da_forma_de_abastecimento', 'codigo_forma_de_abastecimento',
+       'nome_da_forma_de_abastecimento', 'ano', 'mes',
+       'data_da_coleta',
+       'procedencia_da_coleta',
+       'ponto_de_coleta', 'descricao_do_local', 'zona', 
+       'area','local', 'latitude', 'longitude', 'parametro',
+       'resultado','providencia']].reset_index(drop=True)
     if not df.empty:
         st.success(f"{len(df)} registros encontrados.")
         st.dataframe(df)
