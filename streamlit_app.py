@@ -61,7 +61,10 @@ codigo_ibge = st.text_input("Código IBGE do Município (opcional)")
 forma_abastecimento = st.text_input("Tipo da forma de abastecimento (opcional)")
 ano = st.number_input("Ano de referência (opcional)", min_value=2000, max_value=2030, step=1, format="%d")
 mes = st.number_input("Mês de referência (opcional)", min_value=1, max_value=12, step=1, format="%d")
-parametro = st.text_input("Parâmetro básico (opcional)")
+parametro = st.selectbox("Parâmetro básico (opcional)", options =  ['Turbidez (uT)', 'Fluoreto (mg/L)', 'Cloro residual livre (mg/L)', 
+       'Cor Aparente (uH)', 'Dióxido de Cloro (mg/L)',
+       'Cloro residual combinado (mg/L)', 'pH', 'Coliformes totais',
+       'Escherichia coli', 'Bactérias Heterotróficas'], index = None)
 
 # Botão para buscar
 if st.button("Buscar dados"):
