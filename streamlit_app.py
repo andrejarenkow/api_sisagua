@@ -85,7 +85,7 @@ if st.button("Buscar dados"):
        'resultado','providencia']].reset_index(drop=True)
     if not df.empty:
         st.success(f"{len(df)} registros encontrados.")
-        st.dataframe(df)
+        st.dataframe(df, hide_index = True)
         st.download_button("Baixar como CSV", df.to_csv(index=False).encode('utf-8'), file_name="dados_sisagua.csv", mime='text/csv')
     else:
         st.warning("Nenhum dado encontrado para os filtros selecionados.")
