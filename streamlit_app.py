@@ -75,7 +75,7 @@ if st.button("Buscar dados"):
             parametro=parametro if parametro else None
         )
         df = df[['regional_de_saude', 'municipio',
-       'codigo_ibge', 'numero_da_amostra', 'motivo_da_coleta',
+       'numero_da_amostra', 'motivo_da_coleta',
        'tipo_da_forma_de_abastecimento', 'codigo_forma_de_abastecimento',
        'nome_da_forma_de_abastecimento', 'ano', 'mes',
        'data_da_coleta',
