@@ -4,7 +4,7 @@ import requests
 
 def coletar_parametros_sisagua(
     uf='RS',
-    limit=100,
+    limit=1000,
     codigo_ibge=None,
     tipo_da_forma_de_abastecimento=None,
     ano=None,
