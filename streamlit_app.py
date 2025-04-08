@@ -59,7 +59,7 @@ st.title("Consulta SISAGUA - Vigilância de Parâmetros Básicos")
 uf = st.selectbox("UF", ["RS", "SC", "PR", "SP", "MG", "RJ"], index=0)
 codigo_ibge = st.text_input("Código IBGE do Município (opcional)")
 forma_abastecimento = st.text_input("Tipo da forma de abastecimento (opcional)")
-ano = st.number_input("Ano de referência (opcional)", min_value=2000, max_value=2030, step=1, format="%d")
+ano = st.number_input("Ano de referência (opcional)", min_value=2014, max_value=2030, step=1, format="%d")
 mes = st.number_input("Mês de referência (opcional)", min_value=1, max_value=12, step=1, format="%d")
 parametro = st.selectbox("Parâmetro básico (opcional)", options =  ['Turbidez (uT)', 'Fluoreto (mg/L)', 'Cloro residual livre (mg/L)', 
        'Cor Aparente (uH)', 'Dióxido de Cloro (mg/L)',
